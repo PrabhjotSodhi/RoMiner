@@ -4,7 +4,9 @@
     border: 0;
     box-sizing: border-box;
     font-family: 'Nunito';
-    color: white;
+    color: black;
+    text-decoration: none;
+    font-size: 1.125rem;
 }
 .flex {
     display: flex;
@@ -19,17 +21,63 @@
     align-items: center;
 }
 
-
-
 header {
-
+    position: relative;
+    z-index: 1;
 }
-.logo {
-    width: 20em;
+nav {
+    position: relative;
+    background-color: white;
+    padding: 3.75rem;
 }
-.hamburger  {
+.menu span  {
     display: block;
     width: 26px;
     height: 2px;
     background-color: black;
+}
+.menu span:not(:last-child) {
+    margin-bottom: 3px;
+}
+.logo img {
+    width: 2vw;
+}
+.cta {
+    padding: 1rem 1.4rem;
+    background: linear-gradient(to top right, #FBA342, #FBC141);
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 1em;
+}
+
+
+nav .links a {
+    position: relative;
+}
+nav .links a:not(:last-child) {
+    margin-right: 32px;
+}
+nav .links a:hover {
+    color: #FBA342;
+}
+
+.hide-mobile {
+
+}
+.hide-desktop {
+
+}
+
+@media (max-width: 64em) {
+    nav .links a, .cta, .tcta {
+        display: none;
+    }
+}
+
+@media (min-width: 64em) {
+    nav .menu {
+        display: none;
+    }
 }

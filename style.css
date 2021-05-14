@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito';
+    color: white;
+}
+.flex {
+    display: flex;
+}
+.f-jc-sb {
+    justify-content: space-between;
+}
+.f-jc-c {
+    justify-content: center;
+}
+.f-ai-c {
+    align-items: center;
+}
+
+
+
+header {
+
+}
+.logo {
+    width: 20em;
+}
+.hamburger  {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background-color: black;
+}

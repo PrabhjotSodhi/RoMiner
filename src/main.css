@@ -42,6 +42,10 @@ span {
     height: auto;
     margin-right: 5px;
 }
+.logo img.is-active {
+    -webkit-filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1);
+}
 .nav-links {
     position: relative;
     font-weight: 600;
@@ -108,7 +112,7 @@ span {
     min-height: 100vh;
     display: block;
     z-index: 4;
-    background-color: black;
+    background-color: #fbb142;
     padding-top: 120px;
     transition: 0.4s;
 }
@@ -133,6 +137,9 @@ span {
 @media (max-width: 768px) {
     .nav-links a, .cta, .tcta {
         display: none;
+    }
+    span {
+        color: white;
     }
 }
 

@@ -1,40 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+/*-- VARIABLES CSS --*/
+
+:root {
+    --header-height: 3rem;
+    /*-- Colors --*/
+    --main-color: #FBA342;
+    --main-color-alt: #FBC141;
+    --text-color: #919191;
+    --background-color: #FEFBFB;
+    /*-- Font --*/
+    --font: 'Nunito', sans-serif;
+    --font-big: 2rem;
+    --font-med: 1.25rem;
+    --font-small: 0.938rem;
+    --font-bold: 700;
+    --font-semibold: 600;
+    --font-regular: 400;
+    /*-- Font --*/
+    -mb-05: .5rem;
+    -mb-1: 1rem;
+    -mb-15: 1.5rem;
+    -mb-2: 2rem;
+    -mb-25: 2.5rem;
+    -mb-3: 3rem;
+    /*-- z-index --*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+@media screen and (min-width: 968px) {
+     :root {
+        --font-big: 3rem;
+        --font-med: 1.75rem;
+        --font-small: 1rem;
+    }
+}
+
+
+/*-- Base --*/
+
 * {
     margin: 0;
     padding: 0;
     border: 0;
     box-sizing: border-box;
-    font-family: 'Nunito';
-    color: black;
+    font-family: 'Nunito', sans-serif;
+    color: var(--text-color);
     text-decoration: none;
+    scroll-behavior: smooth;
 }
+
+div,
+nav,
+header,
+main,
+html,
+body {
+    background-color: var(--background-color);
+}
+
+
 /*-- Element Styles --*/
+
 header {
     max-width: 1200px;
     width: auto;
     margin: 0 auto;
 }
+
 nav {
     position: relative;
     padding: 3.75rem;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
 }
+
 span {
     color: #FBA342;
 }
 
+p {
+    color: #919191;
+}
+
+h1,
+h2,
+a {
+    color: black;
+}
+
+.hero {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 2em;
+    max-width: 968px;
+    width: calc(100%-3rem);
+    column-gap: 5rem;
+}
+
+.hero .image {
+    width: 50%;
+}
+
+.hero .image img {
+    width: 100%;
+    height: auto;
+}
+
+.hero .content {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.hero .content h1 {
+    font-weight: 800;
+    font-size: 3em;
+}
+
+.hero .content p {
+    font-weight: 600;
+}
+
+.hero .content .cta {
+    padding: 0.6em 1.7em;
+    margin: 0 0.3em 0.3em 0;
+    width: 160px;
+    margin-top: 10px;
+}
+
+
 /*-- Flexbox Styles --*/
+
 .flex {
     display: flex;
 }
 
+
 /*-- One Time Styles --*/
+
 .logo {
     align-items: center;
     font-weight: 800;
     z-index: 5;
 }
+
 .logo img {
     max-width: 4.87em;
     max-height: 3.75em;
@@ -42,68 +156,93 @@ span {
     height: auto;
     margin-right: 5px;
 }
-.logo img.is-active {
+
+.logo.is-active {
+    color: white;
+}
+
+.logo.is-active>span {
+    color: white;
+}
+
+.logo.is-active>img {
     -webkit-filter: brightness(0) invert(1);
     filter: brightness(0) invert(1);
 }
+
 .nav-links {
     position: relative;
     font-weight: 600;
 }
+
 .nav-links a:not(:last-child) {
     margin-right: 32px;
 }
+
 .nav-links a:hover {
     color: #FBA342;
 }
+
 .cta {
     padding: 0.6em 1.7em;
     margin: 0 0.3em 0.3em 0;
     border: 0.1em solid transparent;
     border-radius: 0.12em;
     font-weight: 600;
+    text-align: center;
     transition: all 0.1s;
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(to top right, #FBA342, #FBC141);
-    box-shadow: 2px 1000px 1px #fff inset;
+    box-shadow: 2px 1000px 1px var(--background-color) inset;
 }
+
 .cta:hover {
     color: white !important;
     box-shadow: none;
 }
+
 .hamburger {
-	position: relative;
-	display: block;
-	width: 35px;
-	cursor: pointer;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	background: none;
-	outline: none;
-	border: none;
+    position: relative;
+    display: block;
+    width: 35px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
     z-index: 5;
 }
-.hamburger .bar, .hamburger:after, .hamburger:before {
-	content: '';
-	display: block;
-	width: 100%;
-	height: 5px;
-	background-color: #FBA342;
-	margin: 6px 0px;
-	-webkit-transition: 0.4s;
-	transition: 0.4s
+
+.hamburger .bar,
+.hamburger:after,
+.hamburger:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #FBA342;
+    margin: 6px 0px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s
 }
+
 .hamburger.is-active:before {
-	-webkit-transform: rotate(-45deg) translate(-8px, 6px);
-	transform: rotate(-45deg) translate(-8px, 6px)
+    -webkit-transform: rotate(-45deg) translate(-8px, 6px);
+    transform: rotate(-45deg) translate(-8px, 6px);
+    background-color: white;
 }
+
 .hamburger.is-active:after {
-	-webkit-transform: rotate(45deg) translate(-9px, -8px);
-	transform: rotate(45deg) translate(-9px, -8px)
+    -webkit-transform: rotate(45deg) translate(-9px, -8px);
+    transform: rotate(45deg) translate(-9px, -8px);
+    background-color: white;
 }
+
 .hamburger.is-active .bar {
-	opacity: 0
+    opacity: 0
 }
+
 .mobile-nav {
     position: fixed;
     top: 0;
@@ -116,9 +255,11 @@ span {
     padding-top: 120px;
     transition: 0.4s;
 }
+
 .mobile-nav.is-active {
     left: 0;
 }
+
 .mobile-nav a {
     display: block;
     width: 100%;
@@ -134,17 +275,25 @@ span {
 
 
 /*-- Media Queries --*/
+
 @media (max-width: 768px) {
-    .nav-links a, .cta, .tcta {
+    .nav-links a,
+    .cta,
+    .tcta {
         display: none;
-    }
-    span {
-        color: white;
     }
 }
 
 @media (min-width: 769px) {
-    .mobile-nav, .hamburger {
+    .mobile-nav,
+    .hamburger {
         display: none;
+    }
+}
+
+@media screen and (min-width: 968px) {
+    .hero {
+        margin-left: auto;
+        margin-right: auto;
     }
 }

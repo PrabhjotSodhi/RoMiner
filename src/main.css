@@ -52,14 +52,17 @@
     scroll-behavior: smooth;
 }
 
-div,
 section,
-nav,
-header,
 main,
 html,
 body {
     background-color: var(--background-color);
+}
+
+div,
+nav,
+header {
+    background-color: inherit;
 }
 
 
@@ -90,6 +93,16 @@ h1,
 h2,
 a {
     color: black;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
 }
 
 section {
@@ -135,6 +148,8 @@ section {
 .center {
     max-width: 968px;
     width: calc(100% - 3rem);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -305,8 +320,8 @@ section {
 
 .cards {
     overflow: hidden;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     justify-content: space-between;
     padding-top: var(--mb-2);
     margin: auto;
@@ -315,6 +330,55 @@ section {
 
 .cards>* {
     padding: 1rem 1rem 2rem;
+}
+
+.card>img {
+    max-width: 100%;
+    height: auto;
+    max-height: 140px;
+    width: 140px;
+}
+
+.news>*>img {
+    max-width: 100%;
+    width: 525px;
+    height: auto;
+}
+
+.container {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.container .content>h1 {
+    font-size: var(--font-title);
+}
+
+.container .image {
+    justify-self: center;
+}
+
+.container .image>img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    padding: 4rem 0 2rem;
+}
+
+.footer {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.footer .content h1 {
+    font-size: var(--font-small);
+    margin-bottom: var(--mb-1);
+    font-weight: var(--font-semibold);
+}
+
+.footer .content ul li a {
+    margin-bottom: 0.75rem;
 }
 
 
@@ -346,11 +410,28 @@ section {
     section {
         padding-top: 5rem;
     }
+    section .container {
+        padding: 0 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+    section .container .image {
+        order: -1;
+    }
+    footer {
+        padding-top: 7rem;
+    }
 }
 
 @media screen and (min-width: 968px) {
     .center {
         margin-left: auto;
         margin-right: auto;
+    }
+    section .container {
+        column-gap: 5rem;
+    }
+    section .container .image {
+        width: 80%;
     }
 }

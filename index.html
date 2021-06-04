@@ -12,46 +12,53 @@
 </head>
 
 <body>
-    <header>
+    <!-- NAVBAR CONTENT -->
+    <header> <!-- Header was used to group all nav content -->
         <nav class="flex">
-            <a href="/" class="logo flex"><img src="images/logo.png" id="logo" alt="Rominer"></img>Ro<span>Miner</span></a>
+            <!-- Logo --> 
+            <a href="/" class="logo flex"><img src="images/logo.png" id="logo" alt="Rominer">Ro<span>Miner</span></a> 
+            <!-- NAV-LINKS -->
             <div class="nav-links">
                 <a href="#">About</a>
                 <a href="#">Features</a>
                 <a href="#">Contact</a>
             </div>
+            <!-- LOG IN / SIGN UP -->
             <div class="nav-links">
                 <a href="#" class="tcta">Login</a>
-                <a href="#" class="cta" type="button">Get Started</a>
+                <a href="#" class="cta" >Get Started</a>
             </div>
+            <!-- MOBILE THREE LINES -->
             <button class="hamburger">
                 <div class="bar"></div>
             </button>
         </nav>
     </header>
+    <!-- MOBILE NAV-BAR CONTENT -->
     <div class="mobile-nav">
         <a class="mobile-nav-item" href="#">About</a>
         <a class="mobile-nav-item" href="#">Features</a>
         <a class="mobile-nav-item" href="#">Contact</a>
     </div>
-    <main>
+    <!-- MAIN CONTENT -->
+    <main> <!-- main was used to make content easier to manage and seperate from footer and navbar -->
         <!-- HERO CONTENT -->
         <div class="hero center">
             <div class="content">
                 <h1><span>Fastest</span> & <span>secure</span> platform to mine for Robux</h1>
                 <p>Mine for cryptocurrency get rewarded in Robux. Trusted by 10 million wallets with $10 billion in robux transactions</p>
-                <div style="padding: 0.7em 0em; margin: 1rem 0;"><a href="#" class="cta" type="button">Get Started</a></div>
+                <div style="padding: 0.7em 0em; margin: 1rem 0;"><a href="#" class="cta" >Get Started</a></div>
             </div>
             <div class="image"><img src="./images/hero.png" alt=""></div>
 
         </div>
         <!-- CARDS CONTENT -->
-        <section class="center tcenter">
-            <div class="title">
+        <section class="center tcenter"> <!-- section was used to make content easier to add -->
+            <div class="title"> <!-- div to manage all title text elements -->
                 <h1>How it <span>works</span></h1>
                 <p class="center">RoMiner differs from most crypto miners in that it allows the user to mine directly in their browser.</p>
             </div>
-            <div class="cards">
+            <div class="cards"> <!-- div to manage all card elements -->
                 <div class="card">
                     <img src="/images/bitcoin.png" alt="">
                     <h1>Mine</h1>
@@ -80,13 +87,14 @@
             </div>
         </section>
         <!-- NEWS CONTENT -->
+        <!-- custom style was used here to keep CSS file to not over clustor -->
         <section style="background-color: #F5F5F5; padding-top: 1rem; margin-top: 5rem;">
             <div class="center tcenter">
-                <div class="title">
+                <div class="title"> <!-- div to manage all title text elements -->
                     <h1>Latest <span>News</span></h1>
                     <p class="center">Read all the latest news from RoMiner</p>
                 </div>
-                <div class="cards news">
+                <div class="cards news"> <!-- div to manage all card elements -->
                     <div>
                         <img src="./images/Image.svg" alt="">
                         <p>05 Jun 2021</p>
@@ -103,8 +111,8 @@
                         <h1>Lorem ipsum dolor sit amet, consetetur</h1>
                     </div>
                 </div>
-                <div class="naction center">
-                    <a href="#" class="ncta" type="button">See All News</a>
+                <div class="naction center"> <!-- div to manage all further text elements -->
+                    <a href="#" class="ncta" >See All News</a>
                     <p>Looking for help? <span class="link">Go to support. ↗</span></p>
                 </div>
             </div>
@@ -112,12 +120,12 @@
     </main>
     <!-- FOOTER -->
     <footer>
-        <div class="center container footer">
-            <div class="content">
-                <a href="/" class="logo flex"><img src="images/logo.png" id="logo" alt="Rominer"></img>Ro<span>Miner</span></a>
+        <div class="center container footer"> <!-- div to manage all sections of footer -->
+            <div class="content"> <!-- div to manage all logo text elements -->
+                <a href="/" class="logo flex"><img src="images/logo.png" id="logo" alt="Rominer">Ro<span>Miner</span></a>
                 <p>Mine Robux Earn Rewards</p>
             </div>
-            <div class="content">
+            <div class="content"> <!-- div to manage all quick link elements -->
                 <h1>Quick Links</h1>
                 <ul>
                     <li><a>About</a></li>
@@ -125,7 +133,7 @@
                     <li><a>Privacy Policy</a></li>
                 </ul>
             </div>
-            <div class="content">
+            <div class="content"> <!-- div to manage all support elements -->
                 <h1>Support</h1>
                 <ul>
                     <li><a>Latest News</a></li>
@@ -133,22 +141,20 @@
                     <li><a>Client</a></li>
                 </ul>
             </div>
-            <div class="content">
+            <div class="content"> <!-- div to manage all social elements -->
                 <h1>Social</h1>
                 <a href="/" class="social"><i class="fab fa-discord"></i></a>
                 <a href="/" class="social"><i class="fab fa-youtube-square"></i></a>
                 <a href="/" class="social"><i class="fab fa-reddit-square"></i></a>
                 <a href="/" class="social"><i class="fab fa-twitter-square"></i></a>
             </div>
-        </div>
-        <div class="copyright center flex tcenter">
+        </div> 
+        <div class="copyright center flex tcenter"> <!-- div to manage all copyright elements -->
             <p>Copyright © 2021 RoMiner</p>
             <p>Created by Prabhjot Sodhi</p>
         </div>
     </footer>
-    <script src="./src/main.js"></script>
+    <!-- script to manage all JS elements -->
+    <script src="./src/main.js"></script> 
 </body>
-
-</html>
-
 </html>
